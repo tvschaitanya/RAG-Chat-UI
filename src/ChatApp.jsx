@@ -107,7 +107,7 @@ export default function ChatApp() {
                 {msg.sources && msg.sources.length > 0 && (
                   <div className="mt-1.5 flex flex-wrap gap-1.5 max-w-[82%] pl-1">
                     {msg.sources.map((source, idx) => (
-                      
+                      <a
                         key={idx}
                         href={source}
                         target="_blank"
