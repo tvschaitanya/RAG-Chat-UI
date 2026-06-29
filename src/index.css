@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@utility safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+/* Custom styling rules for parsed Markdown within chat bubbles */
+.markdown-body p {
+  margin-bottom: 0.5rem;
+}
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+.markdown-body strong {
+  font-weight: 700;
+}
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.markdown-body ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.markdown-body code {
+  font-family: monospace;
+  font-size: 0.85em;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+/* Ensure code blocks look legible inside the blue iMessage bubble */
+.bg-blue-500 .markdown-body code {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
